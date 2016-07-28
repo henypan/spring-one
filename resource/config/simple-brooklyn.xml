@@ -6,7 +6,7 @@
     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
    <bean id="brooklynBean" class="com.brooklyn.BrooklynBean">
-       <property name="message" value="Hello Brooklyn!"/>
+       <property name="message" value="Life in Brooklyn!"/>
    </bean>
 
 </beans>

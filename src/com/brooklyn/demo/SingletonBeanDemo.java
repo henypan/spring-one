@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.brooklyn.BrooklynBean;
 
-public class DemoSingletonBean {
+public class SingletonBeanDemo {
 
 	public static void main(String[] args) {
 		ApplicationContext ctx = new ClassPathXmlApplicationContext("config/brooklyn.xml");
