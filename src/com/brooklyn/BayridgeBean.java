@@ -1,8 +1,13 @@
 package com.brooklyn;
 
-public class BayridgeBean {
+public class BayridgeBean extends BrooklynBean {
 	private String message1;
 	private String message2;
+	private BrooklynBean bean = null;
+
+	public BayridgeBean(BrooklynBean bean) {
+		this.bean = bean;
+	}
 
 	public void setMessage1(String message) {
 		this.message1 = message;
@@ -11,12 +16,16 @@ public class BayridgeBean {
 	public String getMessage1() {
 		return message1;
 	}
-	
+
 	public void setMessage2(String message) {
 		this.message2 = message;
 	}
-	
+
 	public String getMessage2() {
 		return message2;
+	}
+	
+	public String getLocation() {
+		return bean.getLocation() + ", Bayridge";
 	}
 }

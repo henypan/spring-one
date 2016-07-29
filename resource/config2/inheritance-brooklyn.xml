@@ -4,13 +4,17 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
     http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	<bean id="brooklynBean" class="com.brooklyn.BrooklynInstanceBean">
+	</bean>
 
 	<bean id="sunsetParkBean" class="com.brooklyn.SunsetParkBean">
+		<constructor-arg ref="brooklynBean"></constructor-arg>
 		<property name="message1" value="In Brooklyn!" />
 		<property name="message2" value="Sunset Park!"></property>
 	</bean>
 
-	<bean id="bayridgeBean" class="com.brooklyn.BayridgeBean" parent="sunsetParkBean">
+	<bean id="bayridgeBean" class="com.brooklyn.BayridgeBean">
+		<constructor-arg ref="brooklynBean"></constructor-arg>
 		<property name="message2" value="Bayrige!"></property>
 	</bean>
 

@@ -14,10 +14,12 @@ public class InheritanceBeanDemo {
 			SunsetParkBean spBean = (SunsetParkBean) ctx.getBean("sunsetParkBean");
 			System.out.println(spBean.getMessage1());
 			System.out.println(spBean.getMessage2());
+			System.out.println(spBean.getLocation());
 
 			BayridgeBean brBean = (BayridgeBean) ctx.getBean("bayridgeBean");
 			System.out.println(brBean.getMessage1());
 			System.out.println(brBean.getMessage2());
+			System.out.println(brBean.getLocation());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
