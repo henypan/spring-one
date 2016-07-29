@@ -6,8 +6,10 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.brooklyn.BrooklynBean;
 
 public class BeanLifeCycleDemo {
+	private static AbstractApplicationContext ctx;
+
 	public static void main(String[] args) {
-		AbstractApplicationContext ctx = new ClassPathXmlApplicationContext("config/life-brooklyn.xml");
+		ctx = new ClassPathXmlApplicationContext("config/life-brooklyn.xml");
 		BrooklynBean bk = (BrooklynBean) ctx.getBean("brooklynBean");
 		System.out.println(bk.getMessage());
 		ctx.registerShutdownHook();
