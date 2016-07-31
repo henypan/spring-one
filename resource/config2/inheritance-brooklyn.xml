@@ -16,6 +16,10 @@
 	<bean id="bayridgeBean" class="com.brooklyn.BayridgeBean">
 		<constructor-arg ref="sunsetParkBean"></constructor-arg>
 		<property name="message2" value="Bayrige!"></property>
+		<property name="threeGuys">
+			<bean id="threeGuys" class="com.brooklyn.entity.ThreeGuysFromBK"></bean>
+		</property>
 	</bean>
+
 
 </beans>

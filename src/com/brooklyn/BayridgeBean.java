@@ -1,10 +1,14 @@
 package com.brooklyn;
 
+import com.brooklyn.entity.ThreeGuysFromBK;
+
 public class BayridgeBean extends BrooklynBean {
 	private String message1;
 	private String message2;
 	private BrooklynBean bean = null;
+	private ThreeGuysFromBK threeGuys;
 
+	// Constructor injection
 	public BayridgeBean(BrooklynBean bean) {
 		this.bean = bean;
 	}
@@ -27,5 +31,14 @@ public class BayridgeBean extends BrooklynBean {
 	
 	public String getLocation() {
 		return bean.getLocation() + ", Bayridge";
+	}
+
+	public ThreeGuysFromBK getThreeGuys() {
+		return threeGuys;
+	}
+
+	// Setter injection
+	public void setThreeGuys(ThreeGuysFromBK threeGuys) {
+		this.threeGuys = threeGuys;
 	}
 }

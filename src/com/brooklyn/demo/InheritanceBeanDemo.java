@@ -20,6 +20,11 @@ public class InheritanceBeanDemo {
 			System.out.println(brBean.getMessage1());
 			System.out.println(brBean.getMessage2());
 			System.out.println(brBean.getLocation());
+			
+			// display API of inner bean
+			brBean.getThreeGuys().open();
+			brBean.getThreeGuys().close();
+			System.out.println(brBean.getThreeGuys().getName());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
